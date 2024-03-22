@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+    --font-family: "Poppins";
+    --black-color: #28282B;
+    --green-color: #006837;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* NAVBAR SECTION */
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30rem;
+    margin-bottom: 5rem;
+}
+
+.navbar-list {
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
+    font-family: var(--font-family);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.navbar-list a {
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+.navbar-list li {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-list li:hover {
+    transform: scale(1.2) translateY(-5px);
+}
+
+.navbar-list li a:hover {
+    color: var(--green-color);
+}
+
+.navbar-menu svg {
+    display: none;
+    width: 25px;
+    height: 25px;
+}
+
+.navbar-menu svg:hover {
+    color: var(--green-color);
+    cursor: pointer;
+}
+
+.header-name {
+    font-family: var(--font-family);
+    font-size: xx-small;
+    color: var(--black-color);
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1000px) {
+    .navbar-list {
+        display: none;
+    }
+    .body-image {
+        display: none;
+    }
+    .navbar-menu svg {
+        display: block;
+    }
+
+    .nav-wrapper {
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+}
+
+/* WELCOME TEXT */
+
+#welcome-text {
+    font-family: var(--font-family);
+    color: var(--black-color);
+    transition: transform 0.5s ease-in-out;
+}
+
+/* BODY SECTION */
+
+.main-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-family);
+}
+
+.body-image {
+    fill: #ebebeb;
+    width: 350px;
+}
+
+.body-text {
+    color: var(--black-color);
+    font-size: larger;
+    width: fit-content;
+}
+
+.body-text h1 {
+    padding: 0;
+    margin: 0;
+}
+
+.body-text h1 span {
+    color: var(--green-color);
+    font-size: larger;
+}
+
+/* FOOTER SECTION */
+
+.footer-list {
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+    gap: 1rem;
+}
+
+.footer-list li a svg {
+    color: var(--green-color);
+    width: 24px;
+    height: 24px;
+}
